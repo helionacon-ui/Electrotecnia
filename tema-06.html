@@ -123,7 +123,8 @@ mjx-container:not([display="true"]){padding:.2em .32em}
 <figure class="fig"><p class="ft">Figura interactiva - curva par-deslizamiento y reparto de potencias</p><div data-sim="asinc"></div><figcaption>Mueve los controles y lee el recuadro: la figura calcula lo mismo que tú harías a mano en el examen.</figcaption></figure>
 <!--amp1--><div class="zero" style="margin-top:14px"><p class="ft">Explicación ampliada</p><p class="ft">Por qué se llama «asíncrona» y qué es el deslizamiento</p><p class="lede">El campo del estátor gira a la velocidad de sincronismo \(n_s\), pero el rotor (de barras en cortocircuito) gira siempre algo <b>más lento</b>: si fuera igual de rápido no vería flujo variable, no se inducirían corrientes y no habría par. A la diferencia relativa se le llama <b>deslizamiento</b> \(s=\dfrac{n_s-n}{n_s}\). En marcha nominal es del 2–5 %; en el arranque \(s=1\) y en sincronismo \(s=0\). La frecuencia de las corrientes del rotor es \(f_r=sf\): casi continua a velocidad nominal.</p><p class="ft">El circuito equivalente: la resistencia «mágica» \(R_r/s\)</p><p>Por fase, el motor es como un transformador cuyo secundario es el rotor. Lo importante: la resistencia del rotor aparece dividida por el deslizamiento, \(R_r'/s=R_r'+R_r'\dfrac{1-s}{s}\). El primer término son las pérdidas en el cobre del rotor; el segundo, la <b>carga mecánica</b> (la potencia útil). Con eso: \(P_{ag}=3I_r'^2R_r'/s\) cruza el entrehierro; el rotor pierde \(sP_{ag}\) y entrega \((1-s)P_{ag}\), de modo que el rendimiento del rotor es \(1-s\).</p>
 <p>El par \(T=P_{ag}/\omega_s\) crece con \(s\) hasta un máximo en \(s_{max}=R_r'/\sqrt{R_s^2+X^2}\) y cae después. Detalle clave: <b>el valor del par máximo no depende de \(R_r'\)</b>, solo la velocidad a la que ocurre; por eso en los rotores bobinados se añade resistencia para arrancar con más par.</p>
-<figure class="fig"><p class="ft">Máquina asíncrona</p><div data-sim="asinc"></div><figcaption>Aumenta la resistencia del rotor: el par máximo no cambia, pero se desplaza hacia el arranque.</figcaption></figure></div><!--/amp1--><!--deep--><h3 id="t6-profundiza">Desarrollo teórico a fondo</h3><div class="deep">
+<figure class="fig"><p class="ft">Máquina asíncrona</p><div data-sim="asinc"></div><figcaption>Aumenta la resistencia del rotor: el par máximo no cambia, pero se desplaza hacia el arranque.</figcaption></figure></div><!--/amp1--><!--manim:et-t6--><figure class="fig manim-fig" id="anim-et-t6"><p class="ft">Animación · Par–velocidad del motor asíncrono</p><div class="manim" data-anim="et-t6"><p class="muted">Activa JavaScript para ver la animación.</p></div><figcaption>Se reproduce sola al llegar a ella. Puedes pausarla, arrastrar la barra para ir a cualquier instante y cambiar la velocidad.</figcaption></figure><!--/manim-->
+<!--deep--><h3 id="t6-profundiza">Desarrollo teórico a fondo</h3><div class="deep">
 <h4><span class="hn">1</span>Máquina asíncrona (de inducción)</h4>
 <div class="box key deepnote"><b>Idea clave.</b> el rotor gira a una velocidad <b>menor</b> que la de sincronismo. Por eso se llama asíncrona. La diferencia de velocidades induce corrientes en el rotor, que crean el par.</div>
 <div class="eqd">\[s=\frac{n_s-n}{n_s}\qquad P_{mec}=(1-s)\,P_{entref}\]</div>
@@ -188,5 +189,7 @@ mjx-container:not([display="true"]){padding:.2em .32em}
 </div>
 <script src="app.js"></script>
 <script src="sims.js"></script>
+<script src="anim-manim.js?v=21870" defer></script>
+<script src="anim-temas.js?v=21870" defer></script>
 </body>
 </html>

@@ -123,7 +123,8 @@ mjx-container:not([display="true"]){padding:.2em .32em}
 <!--amp1--><div class="zero" style="margin-top:14px"><p class="ft">Explicación ampliada</p><p class="ft">La máquina de continua en dos ecuaciones</p><p class="lede">Una máquina de corriente continua se entiende con dos ecuaciones que son «la misma ley» vista desde dos lados: la <b>fuerza contraelectromotriz</b> \(e_a=k_E\omega_m\) (gira ⇒ aparece tensión) y el <b>par</b> \(T_{em}=k_Ti_a\) (hay corriente ⇒ aparece par). En el SI \(k_E=k_T=k\). Con la tensión del inducido \(V_a=R_ai_a+k\omega_m\) se obtiene todo lo demás.</p>
 <p>Lectura de la ecuación: cuando el motor está parado, \(e_a=0\) y la corriente de arranque es \(V_a/R_a\) (muy grande); a medida que acelera, \(e_a\) crece, la corriente baja y el par también, hasta que iguala al de la carga. Por eso los motores grandes necesitan limitar la corriente en el arranque.</p><p class="ft">Característica par-velocidad y control</p><p>Despejando: \(\omega_m=\dfrac{V_a}{k}-\dfrac{R_a}{k^2}T\): es una <b>recta</b> con ordenada \(\omega_0=V_a/k\) (velocidad en vacío) y pendiente \(-R_a/k^2\) (cuanto menor \(R_a\), más «rígida»). Se controla la velocidad de dos maneras: variando \(V_a\) (la recta se desplaza hacia abajo, mismo par disponible) o debilitando el campo (\(k\) baja: sube \(\omega_0\) pero el par por amperio baja).</p>
 <p>Dinámica: con \(J\dfrac{d\omega}{dt}=T-T_L-B\omega\) y una carga constante, la velocidad evoluciona con la constante de tiempo electromecánica \(\tau_m=JR_a/k^2\), mucho mayor que la eléctrica \(L_a/R_a\). Un motor BLDC es la misma máquina con la conmutación hecha por electrónica.</p>
-<figure class="fig"><p class="ft">Máquina de continua</p><div data-sim="mcc"></div><figcaption>Cambia la tensión y la carga: el punto de funcionamiento recorre la recta par-velocidad.</figcaption></figure></div><!--/amp1--><!--deep--><h3 id="t4-profundiza">Desarrollo teórico a fondo</h3><div class="deep">
+<figure class="fig"><p class="ft">Máquina de continua</p><div data-sim="mcc"></div><figcaption>Cambia la tensión y la carga: el punto de funcionamiento recorre la recta par-velocidad.</figcaption></figure></div><!--/amp1--><!--manim:et-t4--><figure class="fig manim-fig" id="anim-et-t4"><p class="ft">Animación · Motor de CC y tensión de inducido</p><div class="manim" data-anim="et-t4"><p class="muted">Activa JavaScript para ver la animación.</p></div><figcaption>Se reproduce sola al llegar a ella. Puedes pausarla, arrastrar la barra para ir a cualquier instante y cambiar la velocidad.</figcaption></figure><!--/manim-->
+<!--deep--><h3 id="t4-profundiza">Desarrollo teórico a fondo</h3><div class="deep">
 <h4><span class="hn">1</span>Estructura de la máquina de continua</h4>
 <ul><li><b>Estator:</b> polos de campo (imanes o bobinas inductoras).</li><li><b>Rotor (inducido):</b> bobinas en las ranuras, conectadas al <b>colector</b> de delgas.</li><li><b>Escobillas:</b> contacto deslizante entre el colector y el circuito exterior. Rectifican la tensión del inducido.</li></ul>
 <h4><span class="hn">2</span>Ecuaciones del motor y del generador</h4>
@@ -186,5 +187,7 @@ mjx-container:not([display="true"]){padding:.2em .32em}
 </div>
 <script src="app.js"></script>
 <script src="sims.js"></script>
+<script src="anim-manim.js?v=21870" defer></script>
+<script src="anim-temas.js?v=21870" defer></script>
 </body>
 </html>
